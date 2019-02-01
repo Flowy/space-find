@@ -2,8 +2,8 @@ package com.flowyk.spacefind.test.business;
 
 import com.flowyk.spacefind.Furniture;
 import com.flowyk.spacefind.Room;
+import com.flowyk.spacefind.RoomInputParser;
 import com.flowyk.spacefind.io.FurnitureInputParser;
-import com.flowyk.spacefind.io.RoomInputParser;
 import com.flowyk.spacefind.test.category.RegressionTest;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
