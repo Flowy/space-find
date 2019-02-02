@@ -1,6 +1,6 @@
-package com.flowyk.spacefind;
+package com.flowyk.spacefind.io;
 
-import com.flowyk.spacefind.coordinate.Position;
+import com.flowyk.spacefind.entity.Position;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -28,7 +28,7 @@ public class RoomInputParserTest {
         expected.add(new Position(0, 2));
         expected.add(new Position(0, 3));
         expected.add(new Position(0, 4));
-        Assert.assertEquals(expected, parser.occupied);
+        Assert.assertEquals(expected, parser.usable);
     }
 
     @Test(expected = RuntimeException.class)

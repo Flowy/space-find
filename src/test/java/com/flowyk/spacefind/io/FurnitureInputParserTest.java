@@ -1,7 +1,7 @@
-package com.flowyk.spacefind;
+package com.flowyk.spacefind.io;
 
-import com.flowyk.spacefind.coordinate.Position;
-import com.flowyk.spacefind.io.FurnitureInputParser;
+import com.flowyk.spacefind.entity.Furniture;
+import com.flowyk.spacefind.entity.Position;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -58,11 +58,11 @@ public class FurnitureInputParserTest {
         Assert.assertEquals("Result size", 1, result.size());
 
         Furniture furniture = result.iterator().next();
-        Assert.assertTrue(furniture.isOn(new Position(0, 0)));
-        Assert.assertFalse(furniture.isOn(new Position(0, 1)));
-        Assert.assertFalse(furniture.isOn(new Position(1, 0)));
-        Assert.assertFalse(furniture.isOn(new Position(1, 1)));
-        Assert.assertTrue(furniture.isOn(new Position(2, 0)));
-        Assert.assertTrue(furniture.isOn(new Position(2, 1)));
+        Assert.assertTrue(furniture.getPositions().contains(new Position(0, 0)));
+        Assert.assertFalse(furniture.getPositions().contains(new Position(0, 1)));
+        Assert.assertFalse(furniture.getPositions().contains(new Position(1, 0)));
+        Assert.assertFalse(furniture.getPositions().contains(new Position(1, 1)));
+        Assert.assertTrue(furniture.getPositions().contains(new Position(2, 0)));
+        Assert.assertTrue(furniture.getPositions().contains(new Position(2, 1)));
     }
 }

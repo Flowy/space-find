@@ -1,6 +1,6 @@
 package com.flowyk.spacefind.test.business;
 
-import com.flowyk.spacefind.io.SolutionOutputPrinter;
+import com.flowyk.spacefind.io.RoomPrinter;
 import com.flowyk.spacefind.test.category.RegressionTest;
 import org.junit.Assert;
 import org.junit.Test;
@@ -15,7 +15,7 @@ public class OutputTest {
 
     @Test
     public void formatOfResponse() {
-        SolutionOutputPrinter printer = new SolutionOutputPrinter();
+        RoomPrinter printer = new RoomPrinter();
 
         String output = printer.print(null);
         if (output.isEmpty()) {

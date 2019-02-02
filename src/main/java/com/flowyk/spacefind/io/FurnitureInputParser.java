@@ -1,7 +1,7 @@
 package com.flowyk.spacefind.io;
 
-import com.flowyk.spacefind.Furniture;
-import com.flowyk.spacefind.coordinate.Position;
+import com.flowyk.spacefind.entity.Furniture;
+import com.flowyk.spacefind.entity.Position;
 
 import java.util.ArrayList;
 import java.util.Collection;
