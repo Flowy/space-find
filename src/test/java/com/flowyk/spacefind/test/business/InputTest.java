@@ -16,7 +16,6 @@ public class InputTest {
     @Test
     public void exampleRoomCanBeParsed() {
         RoomInputParser parser = new RoomInputParser();
-        parser.input("");
         parser.input("5,6");
         parser.input("..###.");
         parser.input(".####.");

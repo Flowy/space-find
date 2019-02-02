@@ -31,7 +31,7 @@ public class RoomInputParser {
     void parseInitial(String line) {
         Matcher initial = initialPattern.matcher(line);
         if (!initial.matches()) {
-            throw new RuntimeException("Initial input '" + line + "' for room can not be parsed");
+            throw new IllegalArgumentException("Initial input '" + line + "' for room can not be parsed");
         }
         height = Integer.valueOf(initial.group("height"));
         width = Integer.valueOf(initial.group("width"));
@@ -41,7 +41,7 @@ public class RoomInputParser {
         Matcher occupancy = occupancyPattern.matcher(line);
 
         if (loadedDepth >= height) {
-            throw new RuntimeException("Room input '" + line + "' is out of bounds for this room, expected height: " + height);
+            throw new IllegalArgumentException("Room input '" + line + "' is out of bounds for this room, expected height: " + height);
         }
 
         int loadedPosition = 0;
@@ -54,11 +54,11 @@ public class RoomInputParser {
         }
 
         if (loadedPosition < width) {
-            throw new RuntimeException("Room input '" + line + "' is too short, expected: " + width);
+            throw new IllegalArgumentException("Room input '" + line + "' is too short, expected: " + width);
         }
 
         if (loadedPosition > width) {
-            throw new RuntimeException("Room input '" + line + "' is too long, expected: " + width);
+            throw new IllegalArgumentException("Room input '" + line + "' is too long, expected: " + width);
         }
 
         loadedDepth += 1;
