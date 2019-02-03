@@ -21,7 +21,7 @@ public class OutputTest {
     public void emptyRoom() {
         RoomPrinter printer = new RoomPrinter();
 
-        Room room = new Room(Arrays.asList(
+        Room room = new Room(5, 7, Arrays.asList(
                 new Position(0, 1),
                 new Position(1, 1),
                 new Position(4, 6)
@@ -34,7 +34,7 @@ public class OutputTest {
     public void existingSolution() {
         RoomPrinter printer = new RoomPrinter();
 
-        Room room = new Room(Arrays.asList(
+        Room room = new Room(5, 7, Arrays.asList(
                 new Position(0, 1),
                 new Position(1, 1),
                 new Position(4, 6)

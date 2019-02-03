@@ -22,7 +22,7 @@ public class BreadthFirstSearch {
     }
 
     List<Room> searchOneLayer(Room room, Furniture furniture) {
-        Iterator<Position> positionIterator = room.usablePositionIterator();
+        Iterator<Position> positionIterator = room.roomPositionIterator();
         FurnitureMover mover = new FurnitureMover();
         List<Room> solutions = new ArrayList<>();
         while (positionIterator.hasNext()) {

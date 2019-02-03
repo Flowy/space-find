@@ -14,7 +14,7 @@ public class SearchTest {
 
     @Test
     public void oneLayerAllPossible() {
-        Room room = new Room(Arrays.asList(
+        Room room = new Room(2, 2, Arrays.asList(
                 new Position(0, 0),
                 new Position(0, 1),
                 new Position(1, 0),
@@ -30,7 +30,7 @@ public class SearchTest {
 
     @Test
     public void twoLayers() {
-        Room room = new Room(Arrays.asList(
+        Room room = new Room(2, 2, Arrays.asList(
                 new Position(0, 0),
                 new Position(0, 1),
                 new Position(1, 0),

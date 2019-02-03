@@ -13,7 +13,6 @@ public class RoomInputParser {
     private static Pattern initialPattern = Pattern.compile("(?<height>\\d+),(?<width>\\d+)");
     private static Pattern designPattern = Pattern.compile("([\\\\.#])");
 
-    Room room;
     Integer height;
     Integer width;
 
@@ -66,6 +65,9 @@ public class RoomInputParser {
     }
 
     public Room getResult() {
-        return new Room(usable);
+        if (height != loadedDepth) {
+            throw new IllegalArgumentException("Room input is too short, expected height: " + height);
+        }
+        return new Room(height, width, usable);
     }
 }
