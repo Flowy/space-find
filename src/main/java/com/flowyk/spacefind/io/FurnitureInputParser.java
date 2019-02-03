@@ -4,7 +4,6 @@ import com.flowyk.spacefind.entity.Furniture;
 import com.flowyk.spacefind.entity.Position;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 import java.util.regex.Matcher;
@@ -51,7 +50,7 @@ public class FurnitureInputParser {
 
     }
 
-    public Collection<Furniture> getResult() {
+    public List<Furniture> getResult() {
         return furnitures;
     }
 }

@@ -66,6 +66,6 @@ public class RoomInputParser {
     }
 
     public Room getResult() {
-        return room;
+        return new Room(usable);
     }
 }

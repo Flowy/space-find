@@ -16,7 +16,9 @@ public class RoomPrinter {
                     .append(")")
                     .append(" ");
         }
-        builder.deleteCharAt(builder.length() - 1); //removes last space
+        if (builder.length() > 0) {
+            builder.deleteCharAt(builder.length() - 1); //removes last space
+        }
         return builder.toString();
     }
 }
