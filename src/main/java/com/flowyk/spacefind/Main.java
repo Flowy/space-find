@@ -18,6 +18,10 @@ public class Main {
 
     public static void main(String[] args) {
         String fileName = "input";
+        if (args != null && args.length == 1) {
+            fileName = args[0];
+        }
+        System.out.println("Using input from file: " + fileName);
         Path path = Paths.get(fileName);
         List<String> lines;
         try {

@@ -6,7 +6,7 @@
 
     <groupId>com.flowyk</groupId>
     <artifactId>space-find</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -79,24 +79,6 @@
                                 <descriptorRef>jar-with-dependencies</descriptorRef>
                             </descriptorRefs>
                         </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>com.jolira</groupId>
-                <artifactId>onejar-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <configuration>
-                            <mainClass>com.flowyk.spacefind.Main</mainClass>
-                            <attachToBuild>true</attachToBuild>
-                            <filename>
-                                ${project.build.finalName}.${project.packaging}
-                            </filename>
-                        </configuration>
-                        <goals>
-                            <goal>one-jar</goal>
-                        </goals>
                     </execution>
                 </executions>
             </plugin>

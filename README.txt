@@ -1,6 +1,8 @@
-To build run in home directory:
+Build:
 mvn clean package
-java -jar target/space-find-1.0 [path to input]
+
+Run:
+java -jar target/space-find-1.0-jar-with-dependencies.jar <path to input>
 
 Path to output file will be printed in console in the end
 
